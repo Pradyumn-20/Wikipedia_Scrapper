@@ -1,0 +1,19 @@
+{% block head %}
+
+<title>Pradyumn's WikiPedia</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">WikiPedia Scrapper</h1>
+
+    <div class="form">
+        <form action="/wiki-scrap" method="POST">
+            <label for="search_data">Choose a Topic</label>
+            <input type="text" name="search_data" id="search_data">
+            <input type="submit" value="Search Data">
+        </form>
+    </div>
+</div>
+{% endblock %}
